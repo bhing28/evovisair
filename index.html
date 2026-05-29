@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>EVOVIS AIRLINES AND CARGO</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:#ffffff;
+      color:#0f172a;
+      line-height:1.6;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* ================= HEADER ================= */
+
+    header{
+      background:#020617;
+      border-bottom:1px solid #1e293b;
+      padding:20px 0;
+    }
+
+    .header-content{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .brand img{
+      height:95px;
+      width:auto;
+      border-radius:8px;
+      background:white;
+      padding:8px;
+    }
+
+    .brand h1{
+      color:white;
+      font-size:38px;
+      letter-spacing:2px;
+      margin-bottom:8px;
+    }
+
+    .brand p{
+      color:#cbd5e1;
+      font-size:18px;
+    }
+
+    .powered{
+      text-align:right;
+    }
+
+    .powered small{
+      color:#cbd5e1;
+      display:block;
+      margin-bottom:5px;
+    }
+
+    .powered strong{
+      color:white;
+      font-size:18px;
+      letter-spacing:1px;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+      padding:100px 0;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:60px;
+      align-items:center;
+    }
+
+    .hero-tag{
+      color:#64748b;
+      letter-spacing:4px;
+      margin-bottom:20px;
+      font-size:13px;
+    }
+
+    .hero h2{
+      font-size:56px;
+      line-height:1.1;
+      margin-bottom:25px;
+    }
+
+    .hero p{
+      font-size:18px;
+      color:#475569;
+      margin-bottom:35px;
+    }
+
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 26px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s ease;
+    }
+
+    .btn-primary{
+      background:#020617;
+      color:white;
+    }
+
+    .btn-secondary{
+      border:1px solid #cbd5e1;
+      color:#020617;
+    }
+
+    /* ================= CARD ================= */
+
+    .card{
+      background:linear-gradient(to bottom right,#020617,#1e293b);
+      color:white;
+      padding:50px;
+      border-radius:24px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .card-top{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+      margin-bottom:25px;
+    }
+
+    .card-top img{
+      height:85px;
+      width:auto;
+      border-radius:8px;
+      background:white;
+      padding:6px;
+    }
+
+    .card-top h3{
+      font-size:34px;
+      margin-bottom:5px;
+    }
+
+    .card-top p{
+      color:#cbd5e1;
+      margin:0;
+      font-size:15px;
+      letter-spacing:1px;
+    }
+
+    .card p{
+      color:#e2e8f0;
+      margin-bottom:20px;
+    }
+
+    /* ================= SERVICES ================= */
+
+    .services{
+      background:#f8fafc;
+      padding:100px 0;
+      border-top:1px solid #e2e8f0;
+      border-bottom:1px solid #e2e8f0;
+    }
+
+    .section-title{
+      margin-bottom:50px;
+    }
+
+    .section-title small{
+      color:#64748b;
+      letter-spacing:4px;
+      display:block;
+      margin-bottom:15px;
+    }
+
+    .section-title h3{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .section-title p{
+      color:#475569;
+      font-size:18px;
+      max-width:800px;
+    }
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .service-box{
+      background:white;
+      border:1px solid #e2e8f0;
+      border-radius:20px;
+      padding:30px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .service-box h4{
+      margin-bottom:15px;
+      font-size:20px;
+    }
+
+    .service-box p{
+      color:#475569;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact{
+      padding:100px 0;
+      text-align:center;
+    }
+
+    .contact-card{
+      display:inline-block;
+      text-align:left;
+      background:white;
+      border:1px solid #e2e8f0;
+      border-radius:24px;
+      padding:40px;
+      margin-top:40px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .contact-card p{
+      margin-bottom:18px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background:#020617;
+      color:#cbd5e1;
+      padding:40px 0;
+      border-top:1px solid #1e293b;
+    }
+
+    .footer-content{
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:20px;
+      align-items:center;
+    }
+
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .footer-brand img{
+      height:60px;
+      width:auto;
+      border-radius:6px;
+      background:white;
+      padding:5px;
+    }
+
+    .footer-brand strong{
+      color:white;
+      display:block;
+      margin-bottom:5px;
+      font-size:18px;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width:768px){
+
+      .hero h2{
+        font-size:40px;
+      }
+
+      .header-content,
+      .footer-content{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .powered{
+        text-align:center;
+      }
+
+      .brand{
+        justify-content:center;
+      }
+
+      .card-top{
+        justify-content:center;
+        text-align:center;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header>
+
+    <div class="container header-content">
+
+      <div class="brand">
+
+        <!-- LOGO -->
+        <img src="logo.png"
+             alt="EVOVIS AIRLINES AND CARGO">
+
+        <!-- BRAND -->
+        <div>
+
+          <h1>
+            EVOVIS AIRLINES AND CARGO
+          </h1>
+
+          <p>
+            Global Aviation, Cargo & Logistics Services
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="powered">
+
+        <small>
+          Powered by
+        </small>
+
+        <strong>
+          EVOVISAIR.COM
+        </strong>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- ================= HERO ================= -->
+
+  <section class="container hero">
+
+    <div>
+
+      <div class="hero-tag">
+        EVOVISAIR.COM
+      </div>
+
+      <h2>
+        Modern Aviation & Cargo Services
+      </h2>
+
+      <p>
+        EVOVIS AIRLINES AND CARGO provides aviation and cargo-related business solutions focused on logistics coordination, transportation support, cargo assistance, and scalable aviation services for future growth.
+      </p>
+
+      <div class="buttons">
+
+        <a href="mailto:info@evovisair.com"
+           class="btn btn-primary">
+
+          Request Information
+
+        </a>
+
+        <a href="#services"
+           class="btn btn-secondary">
+
+          View Services
+
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- HERO CARD -->
+
+    <div class="card">
+
+      <div class="card-top">
+
+        <img src="logo.png"
+             alt="EVOVIS AIRLINES AND CARGO">
+
+        <div>
+
+          <h3>
+            EVOVIS AIRLINES AND CARGO
+          </h3>
+
+          <p>
+            Global Aviation • Cargo • Logistics
+          </p>
+
+        </div>
+
+      </div>
+
+      <p>
+        Operating through EVOVISAIR.COM, our mission is to support modern cargo and aviation operations with reliable service, streamlined communication, and transportation-focused solutions.
+      </p>
+
+      <p>
+        We are building a future-ready aviation and logistics brand designed for long-term growth and operational excellence.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <small>SERVICES</small>
+
+        <h3>
+          Airlines & Cargo Support Services
+        </h3>
+
+        <p>
+          EVOVIS AIRLINES AND CARGO supports aviation and cargo-related operations through logistics coordination, transportation support, freight assistance, and scalable service solutions.
+        </p>
+
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-box">
+          <h4>Air Cargo Coordination</h4>
+          <p>Professional support services designed to assist evolving aviation and cargo operations.</p>
+        </div>
+
+        <div class="service-box">
+          <h4>Aviation Logistics Support</h4>
+          <p>Professional support services designed to assist evolving aviation and cargo operations.</p>
+        </div>
+
+        <div class="service-box">
+          <h4>Cargo Transportation Solutions</h4>
+          <p>Professional support services designed to assist evolving aviation and cargo operations.</p>
+        </div>
+
+        <div class="service-box">
+          <h4>Freight & Shipment Assistance</h4>
+          <p>Professional support services designed to assist evolving aviation and cargo operations.</p>
+        </div>
+
+        <div class="service-box">
+          <h4>Aviation Business Consulting</h4>
+          <p>Professional support services designed to assist evolving aviation and cargo operations.</p>
+        </div>
+
+        <div class="service-box">
+          <h4>Logistics Planning & Support</h4>
+          <p>Professional support services designed to assist evolving aviation and cargo operations.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+
+  <section class="contact">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <small>CONTACT</small>
+
+        <h3>
+          Request Business Information
+        </h3>
+
+        <p>
+          For aviation support, cargo-related services, logistics inquiries, or future business opportunities, contact EVOVIS AIRLINES AND CARGO directly through EVOVISAIR.COM.
+        </p>
+
+      </div>
+
+      <div class="contact-card">
+
+        <p>
+          <strong>Brand:</strong>
+          EVOVIS AIRLINES AND CARGO
+        </p>
+
+        <p>
+          <strong>Website:</strong>
+          EVOVISAIR.COM
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          info@evovisair.com
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div class="footer-brand">
+
+        <img src="logo.png"
+             alt="EVOVIS AIRLINES AND CARGO">
+
+        <div>
+
+          <strong>
+            EVOVIS AIRLINES AND CARGO
+          </strong>
+
+          <p>
+            Global Aviation, Cargo & Logistics Services
+          </p>
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <p>
+          Operating through EVOVISAIR.COM
+        </p>
+
+        <p>
+          © 2026 EVOVIS AIRLINES AND CARGO. All rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
