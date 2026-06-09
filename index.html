@@ -236,99 +236,38 @@
 
     /* ================= CONTACT ================= */
 
-    <section class="contact">
+   .contact{
+  padding:100px 0;
+  text-align:center;
+}
 
-  <div class="container">
+.contact-card{
+  display:inline-block;
+  text-align:left;
+  background:white;
+  border:1px solid #e2e8f0;
+  border-radius:24px;
+  padding:40px;
+  margin-top:40px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  width:100%;
+  max-width:700px;
+}
 
-    <div class="section-title">
+.contact-card input,
+.contact-card textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #cbd5e1;
+  border-radius:10px;
+  margin-top:6px;
+}
 
-      <small>CONTACT</small>
-
-      <h3>
-        Contact EVOVIS AIRLINES AND CARGO
-      </h3>
-
-      <p>
-        For cargo services, aviation inquiries, logistics support,
-        partnership opportunities, or general questions, please send us
-        a message below.
-      </p>
-
-    </div>
-
-    <div class="contact-card">
-
-      <form action="https://formsubmit.co/info@evovisair.com"
-            method="POST">
-
-        <!-- Prevent spam -->
-        <input type="hidden" name="_captcha" value="false">
-
-        <!-- Optional success page -->
-        <input type="hidden"
-               name="_subject"
-               value="New Website Inquiry - EVOVIS AIRLINES AND CARGO">
-
-        <p>
-          <label><strong>Name</strong></label><br>
-          <input type="text"
-                 name="name"
-                 required
-                 style="width:100%;padding:12px;margin-top:6px;">
-        </p>
-
-        <p>
-          <label><strong>Email</strong></label><br>
-          <input type="email"
-                 name="email"
-                 required
-                 style="width:100%;padding:12px;margin-top:6px;">
-        </p>
-
-        <p>
-          <label><strong>Subject</strong></label><br>
-          <input type="text"
-                 name="subject"
-                 required
-                 style="width:100%;padding:12px;margin-top:6px;">
-        </p>
-
-        <p>
-          <label><strong>Message</strong></label><br>
-          <textarea name="message"
-                    rows="6"
-                    required
-                    style="width:100%;padding:12px;margin-top:6px;"></textarea>
-        </p>
-
-        <button type="submit"
-                class="btn btn-primary">
-          Send Message
-        </button>
-
-      </form>
-
-      <hr style="margin:30px 0;">
-
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:info@evovisair.com">
-          info@evovisair.com
-        </a>
-      </p>
-
-      <p>
-        <strong>Website:</strong>
-        EVOVISAIR.COM
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-    }
+.contact-card input:focus,
+.contact-card textarea:focus{
+  outline:none;
+  border-color:#020617;
+}
 
     /* ================= FOOTER ================= */
 
